@@ -21,6 +21,7 @@ namespace LogginNLogLibrary.Controllers
         public IActionResult Index()
         {
             return View();
+            this._logger.LogInformation("Index sayfası başlamıştır...");
         }
 
         public IActionResult Privacy()
