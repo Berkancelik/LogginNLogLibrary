@@ -20,8 +20,24 @@ namespace LogginNLogLibrary.Controllers
 
         public IActionResult Index()
         {
+
+
+            int value1 = 5;
+            int value2 = 0;
+            int result;
+                try
+            {
+                result = value1 / value2;
+            }
+            catch (Exception ex)
+            {
+                this._logger.LogError(ex, ex.Message);
+            }
+
+            _logger.LogInformation("Index sayfası başlamıştır...");
+            _logger.LogWarning("Warning Hata.");
+            _logger.LogError("Error Log...");
             return View();
-            this._logger.LogInformation("Index sayfası başlamıştır...");
         }
 
         public IActionResult Privacy()
